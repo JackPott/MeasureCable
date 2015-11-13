@@ -1,0 +1,33 @@
+<%= form_for(@drum_type) do |f| %>
+  <% if @drum_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drum_type.errors.count, "error") %> prohibited this drum_type from being saved:</h2>
+
+      <ul>
+      <% @drum_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :diameter %><br>
+    <%= f.number_field :diameter %>
+  </div>
+  <div class="field">
+    <%= f.label :width %><br>
+    <%= f.number_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :empty_grams %><br>
+    <%= f.number_field :empty_grams %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

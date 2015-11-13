@@ -1,0 +1,11 @@
+<h1>Enter weight in kg</h1>
+  
+  <%= form_tag(controller: "wizard", action: "result") do %>
+<%= label_tag :measured_kg, "Weight" %>
+<p><%= number_field(:wizard, :measured_kg, in: 0.00..60.00, step: 0.01, class: "number_field") %> <span id="kg">kg</span></p>
+<br>
+  <%= hidden_field_tag("wizard[cable_type]", @query["cable_type"]) %>
+  <%= hidden_field_tag("wizard[drum_type]", @query["drum_type"]) %>
+<%= button_tag "Next >" %>
+  
+<% end %>

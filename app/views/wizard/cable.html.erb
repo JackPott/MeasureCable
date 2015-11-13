@@ -1,0 +1,35 @@
+<div id="fake_body">
+  <h1>Pick cable type</h1>
+
+  <%= form_tag(controller: "wizard", action: "drum") do %>
+  <%= label_tag :wizard, "Cable Types" %><br>
+    <%= #collection_select(:wizard,  :cable_type, @cables, :id, :description) 
+  %>
+
+    <table width=100%>
+      <thead>
+        <tr>
+          <th width=5%>&nbsp;</th>
+          <th width=20%>SKU</th>
+          <th width=70%>Description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @cables.each do |c| %>
+        <tr>
+          <td style="text-align: center"><%= radio_button_tag "wizard[cable_type]", c.id.to_s %></td>
+          <td><%= c.sku %></td>
+          <td><%= c.description %></td>
+        </tr>
+        <% end %>
+
+      </tbody>
+  </table>
+
+
+  <%= button_tag "Next >" %>
+  <%=  %>
+  <% end %>
+
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: MyString
+  description: MyString
+  grams_per_metre: 1
+
+two:
+  sku: MyString
+  description: MyString
+  grams_per_metre: 1

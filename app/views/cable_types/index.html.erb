@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cable Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sku</th>
+      <th>Description</th>
+      <th>Grams per metre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cable_types.each do |cable_type| %>
+      <tr>
+        <td><%= cable_type.sku %></td>
+        <td><%= cable_type.description %></td>
+        <td><%= cable_type.grams_per_metre %></td>
+        <td><%= link_to 'Show', cable_type %></td>
+        <td><%= link_to 'Edit', edit_cable_type_path(cable_type) %></td>
+        <td><%= link_to 'Destroy', cable_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cable type', new_cable_type_path %>

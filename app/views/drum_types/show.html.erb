@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Diameter:</strong>
+  <%= @drum_type.diameter %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @drum_type.width %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @drum_type.description %>
+</p>
+
+<p>
+  <strong>Empty grams:</strong>
+  <%= @drum_type.empty_grams %>
+</p>
+
+<%= link_to 'Edit', edit_drum_type_path(@drum_type) %> |
+<%= link_to 'Back', drum_types_path %>

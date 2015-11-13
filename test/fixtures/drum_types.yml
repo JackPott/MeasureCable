@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  diameter: 1
+  width: 1
+  description: MyString
+  empty_grams: 1
+
+two:
+  diameter: 1
+  width: 1
+  description: MyString
+  empty_grams: 1

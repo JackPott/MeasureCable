@@ -1,0 +1,121 @@
+// Place all the styles related to the wizard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.number_field {
+  font-size: 5em !important; 
+  height: 1.5em !important;
+  display: inline-block !important;
+  width: 60% !important;
+}
+
+@media screen, print {
+  
+  #fake_body {
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  button {
+  color: #eee;
+  font-weight: bold;
+  font-size: 150%;
+  text-transform: uppercase;
+}
+  
+  #kg { 
+    font-size: 4em;
+  }
+  
+  #result_metres { 
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: underline;
+  }
+  
+  #print_preview {
+    width: 150mm;
+    height: 102mm;
+    border: 1px grey solid;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 3mm 5mm 5mm 5mm;
+  }
+  
+  .print-instructions {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  #label_logo { 
+    width: 35mm;
+    margin-top: 0mm;
+    margin-bottom: 3mm;
+  }
+  
+  .logo_row {     border-bottom: 1px black solid; }
+  
+  #sku {
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: normal;
+    text-align: left;
+    margin-top: 5mm;
+  }
+
+  #description {
+  font-size: 16pt;
+  line-height: normal;
+  text-align: left;
+  margin-top: 5mm;
+  }
+
+  #metres {
+    font-size: 24pt;
+    line-height: normal;
+    margin-top: 15mm;
+  }
+
+  #measured_date {
+    font-size: 10pt;
+    font-style: italic;
+    line-height: normal;
+    margin-top: 10mm;
+  }
+}
+
+@media print {
+  
+    #fake_body {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  #print_preview {
+    border: none;
+    width: 150mm;
+    height:92mm;
+    text-align: center;
+    margin: 0 0;
+    background-color: white;
+    padding: 4mm 8mm 0mm 8mm;
+  }
+
+  .menu {
+    display: none !important;
+  }
+  
+  .print-instructions {
+    display: none;
+  }
+
+}

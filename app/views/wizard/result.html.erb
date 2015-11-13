@@ -1,0 +1,29 @@
+<div id="fake_body">
+  <h1>Result</h1>
+
+  <p>You have approximately <span id="result_metres"><%= @approx_metres %></span> metres of cable on that drum.
+  <p>The margin for error is <%= @margin_of_error %> metres.
+
+
+  <h3>Workings out</h3>
+  <p><strong>Cable grams per m: </strong> <%=@cable_grams_per_metre %></p>
+  <p><strong>Empty drum grams: </strong> <%=@empty_drum_grams %></p>
+  <p><strong>Measured grams: </strong> <%=@measured_grams %></p>
+  <p>(<%=@measured_grams %> - <%= @empty_drum_grams %>) / <%= @cable_grams_per_metre %> = <%= @approx_metres %></p>
+  <%= form_tag({controller: "wizard", action: "label"}, class: "popup") do %>
+    <%= hidden_field_tag("wizard[cable_type]", @query["cable_type"]) %>
+    <%= hidden_field_tag("wizard[drum_type]", @query["drum_type"]) %>
+    <%= hidden_field_tag("wizard[approx_metres]", @approx_metres) %>
+    <%= hidden_field_tag("wizard[margin_of_error]", @margin_of_error) %> 
+    <%= button_tag "Print label" %>  
+  <% end %>
+
+  <%= link_to "Start again", wizard_cable_path %>
+
+  <script>
+  $('.popup').click(function(e) {
+      e.preventDefault(); //prevents the default submit action
+      $(this).closest('form').attr('target', '_blank').submit();
+  });
+  </script>
+</div>

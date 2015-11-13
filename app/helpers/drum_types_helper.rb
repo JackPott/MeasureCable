@@ -1,0 +1,2 @@
+module DrumTypesHelper
+end

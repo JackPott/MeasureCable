@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @cable_type.sku %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cable_type.description %>
+</p>
+
+<p>
+  <strong>Grams per metre:</strong>
+  <%= @cable_type.grams_per_metre %>
+</p>
+
+<%= link_to 'Edit', edit_cable_type_path(@cable_type) %> |
+<%= link_to 'Back', cable_types_path %>

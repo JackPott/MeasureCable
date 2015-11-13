@@ -1,0 +1,43 @@
+<div id="fake_body">
+  <div class="panel callout radius print-instructions">
+    <h5>How to print</h5>
+    <p>Print to the QL-1060N label printer.</p>
+    <p>Under 'More Settings' turn off Headers &amp; Footers, and set margins to 'None'.</p>
+    <p>Paper size 102x150mm, landscape. </p>
+  </div>
+  
+  <div id="print_preview">
+    <div class="row">
+      <div class="small-12 columns logo_row">
+        <%= image_tag "asl_logo.jpg", id: "label_logo" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <div id="sku"><%= @cable.sku %></div>     
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <div id="description"><%= @cable.description %></div>       
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <div id="metres"><%= @metres_lower %> - <%= @metres_upper %>m remaining</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <div id="measured_date">Measured <%= @today %></div>
+      </div>
+    </div>
+
+
+    
+    
+
+
+
+  </div>
+</div>
