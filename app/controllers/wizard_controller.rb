@@ -14,6 +14,7 @@ class WizardController < ApplicationController
 
   def result
     @query = params[:wizard]
+    @cable                   = CableType.find(@query["cable_type"])
     @cable_grams_per_metre  = CableType.find(@query["cable_type"]).grams_per_metre.to_i
     @empty_drum_grams       = DrumType.find(@query["drum_type"]).empty_grams.to_i
     @measured_grams         = @query["measured_kg"].to_f * 1000
@@ -33,6 +34,7 @@ class WizardController < ApplicationController
   def label
     @query = params[:wizard]
     @cable = CableType.find(@query["cable_type"])
+    @drum  = DrumType.find(@query["drum_type"])
     moe = @query["margin_of_error"].to_i
     am  = @query["approx_metres"].to_i
     @metres_upper = am + moe

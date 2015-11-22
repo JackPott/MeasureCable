@@ -1,7 +1,7 @@
 <div class="medium-12 columns">
   <h1>Result</h1>
 
-  <p>You have approximately <span id="result_metres"><%= @approx_metres %></span> metres of cable on that drum.
+  <p>You have approximately <span id="result_metres"><%= @approx_metres %></span> metres of cable on that drum of <%= @cable.description %> (<%=@cable.sku %>).
   <p>The margin for error is <%= @margin_of_error %> metres. Although the scales are accurate to the nearest 10 grams, its likely that the variation in drums is much higher. A 200g error margin is currently shown for this reason. 
 
 
