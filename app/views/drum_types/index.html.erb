@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="medium-12 columns">
+  <p id="notice"><%= notice %></p>
 
 <h1>Listing Drum Types</h1>
 
@@ -9,7 +10,7 @@
       <th>Width</th>
       <th>Description</th>
       <th>Empty grams</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -20,9 +21,8 @@
         <td><%= drum_type.width %></td>
         <td><%= drum_type.description %></td>
         <td><%= drum_type.empty_grams %></td>
-        <td><%= link_to 'Show', drum_type %></td>
-        <td><%= link_to 'Edit', edit_drum_type_path(drum_type) %></td>
-        <td><%= link_to 'Destroy', drum_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to image_tag('pencil-icon'), edit_drum_type_path(drum_type) %></td>
+        <td><%= link_to image_tag("delete-icon"), drum_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,5 @@
 
 <br>
 
-<%= link_to 'New Drum type', new_drum_type_path %>
+  <%= link_to button_tag('New Drum type', class: 'success'), new_drum_type_path %>
+</div>

@@ -2,6 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+table {
+  margin: 0 auto;
+}
+
+.grey { 
+  background-color: #eee;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 3px #eee;
+}
+
+.purple {
+  background-color: #663399;
+}
+
+a:hover .purple {  
+  background-color: #441177;
+}
+
+
+
+#title_logo {
+  
+  width: 200px;
+  margin-bottom: 20px;  
+  margin-top: 5px;
+}
+
 .number_field {
   font-size: 5em !important; 
   height: 1.5em !important;
@@ -44,7 +71,7 @@
     border: 1px grey solid;
     text-align: center;
     margin: 0 auto;
-    background-color: white;
+    background-color: white !important;
     padding: 3mm 5mm 5mm 5mm;
   }
   
@@ -115,6 +142,10 @@
   }
   
   .print-instructions {
+    display: none;
+  }
+  
+  .title {
     display: none;
   }
 

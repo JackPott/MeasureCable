@@ -17,7 +17,7 @@ class WizardController < ApplicationController
     @cable_grams_per_metre  = CableType.find(@query["cable_type"]).grams_per_metre.to_i
     @empty_drum_grams       = DrumType.find(@query["drum_type"]).empty_grams.to_i
     @measured_grams         = @query["measured_kg"].to_f * 1000
-    scale_increment        = 100.0
+    scale_increment        = 200.0
     
     @approx_metres         = ((@measured_grams - @empty_drum_grams) / @cable_grams_per_metre).round
     @margin_of_error       = (scale_increment / @cable_grams_per_metre).ceil

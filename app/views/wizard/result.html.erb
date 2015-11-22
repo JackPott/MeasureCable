@@ -1,8 +1,8 @@
-<div id="fake_body">
+<div class="medium-12 columns">
   <h1>Result</h1>
 
   <p>You have approximately <span id="result_metres"><%= @approx_metres %></span> metres of cable on that drum.
-  <p>The margin for error is <%= @margin_of_error %> metres.
+  <p>The margin for error is <%= @margin_of_error %> metres. Although the scales are accurate to the nearest 10 grams, its likely that the variation in drums is much higher. A 200g error margin is currently shown for this reason. 
 
 
   <h3>Workings out</h3>
@@ -17,8 +17,6 @@
     <%= hidden_field_tag("wizard[margin_of_error]", @margin_of_error) %> 
     <%= button_tag "Print label" %>  
   <% end %>
-
-  <%= link_to "Start again", wizard_cable_path %>
 
   <script>
   $('.popup').click(function(e) {

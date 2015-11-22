@@ -9,17 +9,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="row">
-  <%= yield %>
-  
-  <hr class='menu'>
-  <p class='menu'><%=link_to "Edit cable types", :cable_types  %></p>
-  <p class='menu'><%=link_to "Edit drum types", :drum_types  %></p>
-  <p class='menu'><%=link_to "Cable wizard", :wizard_cable  %></p>
-  
-  
+
+<div class="row title"> 
+  <div class="medium-12 columns" style="text-align: center;">
+    <%= image_tag "asl_logo.jpg", id: "title_logo" %>
+  </div>
 </div>
   
+<div class="row grey">
+  <%= yield %>
+  
+  <div class="small-12 columns">
+    <hr class='menu'>
+    <p class='menu'><%=link_to button_tag("Cable wizard", class: 'purple'), :wizard_cable  %></p>
+    <p class='menu'><%=link_to button_tag("Edit cable types", class: 'info'), :cable_types  %></p>
+    <p class='menu'><%=link_to button_tag("Edit drum types", class: 'info'), :drum_types  %></p>
+
+  </div>
+  
+</div>
   
   
 </body>
