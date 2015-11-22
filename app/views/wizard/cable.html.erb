@@ -2,7 +2,6 @@
   <h1>Pick cable type</h1>
 
   <%= form_tag(controller: "wizard", action: "drum") do %>
-  <%= label_tag :wizard, "Cable Types" %><br>
     <%= #collection_select(:wizard,  :cable_type, @cables, :id, :description) 
   %>
 

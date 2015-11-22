@@ -4,11 +4,19 @@ class WizardController < ApplicationController
   end
 
   def drum
+    if !params[:wizard] then
+      redirect_to wizard_cable_path, flash: { notice: "You must pick a cable type." }
+    end
+      
     @drums = DrumType.all.order(:diameter, :width, :description)
     @query = params[:wizard]
   end
 
   def weight
+    if !params[:wizard] then
+      redirect_to wizard_cable_path, flash: { notice: "Something went wrong, and so you have to start again. Have a nice user experience!" }
+    end
+          
     @query = params[:wizard]
   end
 
@@ -26,6 +34,10 @@ class WizardController < ApplicationController
     if (@approx_metres < 1) then 
       @approx_metres = 0
     end
+      
+      if (@measured_grams < @empty_drum_grams.to_f) then
+        flash[:notice] = "Measured weight was less than the empty drum weight. Are you sure you have selected the correct drum and cable type?"
+      end
       
     #TODO: If measured grams is less than drum weight, redirect to weight with a flash error (pass on query)
        

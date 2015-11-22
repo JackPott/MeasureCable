@@ -16,7 +16,13 @@
   </div>
 </div>
   
+
+  
 <div class="row grey">
+  <% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key}" %>
+<% end %>
+  
   <%= yield %>
   
   <div class="small-12 columns">
