@@ -4,7 +4,7 @@ class DrumTypesController < ApplicationController
   # GET /drum_types
   # GET /drum_types.json
   def index
-    @drum_types = DrumType.all
+    @drum_types = DrumType.all.order(:description)
   end
 
   # GET /drum_types/1
